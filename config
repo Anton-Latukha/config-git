@@ -1,0 +1,5 @@
+[user]
+	email = anton.latukha@gmail.com
+	name = Anton-Latukha
+[core]
+	editor = emacsclient -c -t
