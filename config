@@ -6,7 +6,7 @@
 [alias]
     # freebase = pull --rebase
     # commit = commit -a -v
-    # ci = commit
+    c = commit
     co = checkout
     com = checkout master
     # b = branch
