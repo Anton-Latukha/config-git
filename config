@@ -8,6 +8,7 @@
     # commit = commit -a -v
     # ci = commit
     co = checkout
+    com = checkout master
     # b = branch
     # nb = checkout -b
     # stat = status
