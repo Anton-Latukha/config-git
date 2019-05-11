@@ -7,7 +7,7 @@
     # freebase = pull --rebase
     # commit = commit -a -v
     # ci = commit
-    # co = checkout
+    co = checkout
     # b = branch
     # nb = checkout -b
     # stat = status
