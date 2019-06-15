@@ -11,6 +11,7 @@
 	com = checkout master
 	b = branch
 	bc = checkout -b
+	r = reset
 	s = status
 	z = stash list
 	zs = stash save
