@@ -12,6 +12,17 @@
 	b = branch
 	bc = checkout -b
 	r = reset
+	r0 = reset HEAD~0
+	r1 = reset HEAD~1
+	r2 = reset HEAD~2
+	r3 = reset HEAD~3
+	r4 = reset HEAD~4
+	r5 = reset HEAD~5
+	r6 = reset HEAD~6
+	r7 = reset HEAD~7
+	r8 = reset HEAD~8
+	r9 = reset HEAD~9
+	r10 = reset HEAD~10
 	s = status
 	z = stash list
 	zs = stash save
