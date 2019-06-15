@@ -9,12 +9,13 @@
 	c = commit
 	co = checkout
 	com = checkout master
-	# b = branch
-	# nb = checkout -b
-	# stat = status
-	# sl = stash list
-	# sa = stash apply
-	# sd = stash drop
+	b = branch
+	bc = checkout -b
+	s = status
+	z = stash list
+	zs = stash save
+	za = stash apply
+	zd = stash drop
 	# quicklog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
 	# changes = log --oneline --decorate
 	# changelog = show --name-only
