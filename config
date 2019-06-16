@@ -10,9 +10,11 @@
 	co = checkout
 	com = checkout master
 	pl = pull
+	plu = pull u
 	pll = pull
 	ps = push
 	ph = push
+	phf = push f
 	b = branch
 	bc = checkout -b
 	r = reset
