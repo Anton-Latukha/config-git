@@ -9,6 +9,10 @@
 	c = commit
 	co = checkout
 	com = checkout master
+	pl = pull
+	pll = pull
+	ps = push
+	ph = push
 	b = branch
 	bc = checkout -b
 	r = reset
