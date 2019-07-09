@@ -9,6 +9,7 @@
 	c = commit
 	co = checkout
 	com = checkout master
+	cl = clone --origin u
 	pl = pull
 	plu = pull u
 	pll = pull
