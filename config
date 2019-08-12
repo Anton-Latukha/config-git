@@ -36,6 +36,7 @@
 	za = stash apply
 	zd = stash drop
 	rl = remote -v
+	bmv = branch -m
 	# quicklog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
 	# changes = log --oneline --decorate
 	# changelog = show --name-only
