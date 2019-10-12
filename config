@@ -62,3 +62,5 @@
 	# permission-reset = "git clone git://github.com/balupton/history.js.git help config  diff -p | grep -E '^(diff|old mode|new mode)' | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' | git apply"
 	# username = config --get user.name
 	# standup = !sh -c 'git log --pretty=format:\"%Cred%h%Creset - %Cgreen%cr%Creset : %s\" --since=\"`date -v-1d \"+%Y-%m-%d 00:00:00\"`\" --until=\"`date \"+%Y-%m-%d 00:00:00\"`\" --all --author=\"`git config --get user.name`\"'
+[commit]
+	gpgSign = true
