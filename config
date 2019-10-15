@@ -1,26 +1,31 @@
 [user]
 	email = anton.latukha@gmail.com
 	name = Anton-Latukha
+	signingkey = 30F3C943744E1A3C473F2C723D84C07E91802E41
 [core]
 	editor = emacsclient -c -t
 [alias]
-	# freebase = pull --rebase
-	# commit = commit -a -v
-	c = commit
-	co = checkout
-	com = checkout master
-	cl = clone --origin u
-	pl = pull
-	plu = pull u
-	pll = pull
-	ps = push
-	ph = push
-	phf = push f
 	b = branch
 	bc = checkout -b
+	bmv = branch -m
+	c = commit -m
+	cl = clone --origin u
+	co = checkout
+	com = checkout master
+	d = diff
+	g = log --graph --oneline --decorate=full
+	gv = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+	l = log
+	ph = push
+	phf = push f
+	pl = pull
+	pll = pull
+	plu = pull u
+	ps = push
 	r = reset
 	r0 = reset HEAD~0
 	r1 = reset HEAD~1
+	r10 = reset HEAD~10
 	r2 = reset HEAD~2
 	r3 = reset HEAD~3
 	r4 = reset HEAD~4
@@ -29,38 +34,41 @@
 	r7 = reset HEAD~7
 	r8 = reset HEAD~8
 	r9 = reset HEAD~9
-	r10 = reset HEAD~10
+	rl = remote -v
+	s = status
 	s = status
 	z = stash list
-	zs = stash save
 	za = stash apply
 	zd = stash drop
-	rl = remote -v
-	bmv = branch -m
-	# quicklog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
-	# changes = log --oneline --decorate
+	zs = stash save
 	# changelog = show --name-only
-	# svnup = svn rebase
-	# svnpush = svn dcommit
+	# changes = log --oneline --decorate
+	# commit = commit -a -v
 	# commitnumber = !git log --pretty=oneline | wc -l
-	# diffmate = !sh -c 'git diff HEAD $1 | mate -' -
+	# db = !sh -c 'git branch -D $1 && git push origin :$1' -
 	# difffile = !sh -c 'git diff HEAD $1 | mate -' -
 	# diffile = !sh -c 'git diff HEAD $1 | mate -' -
+	# diffmate = !sh -c 'git diff HEAD $1 | mate -' -
 	# difile = !sh -c 'git diff HEAD $1 | mate -' -
-	# worddiff = diff --word-diff
 	# fakeignore = update-index --assume-unchanged
+	# first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
+	# freebase = pull --rebase
+	# has = branch --contains
 	# ignore = update-index --assume-unchanged
+	# lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
+	# permission-reset = "git clone git://github.com/balupton/history.js.git help config  diff -p | grep -E '^(diff|old mode|new mode)' | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' | git apply"
+	# ph = log --graph --pretty=pretty-history --abbrev-commit --date=relative
+	# quicklog = log --pretty=format:'%Cblue%h %Cred%cD %Creset%cn %Cgreen%s%Creset' --date-order --graph
+	# standup = !sh -c 'git log --pretty=format:\"%Cred%h%Creset - %Cgreen%cr%Creset : %s\" --since=\"`date -v-1d \"+%Y-%m-%d 00:00:00\"`\" --until=\"`date \"+%Y-%m-%d 00:00:00\"`\" --all --author=\"`git config --get user.name`\"'
+	# svnpush = svn dcommit
+	# svnup = svn rebase
+	# sweep = !sh -c 'git-sweep cleanup'
 	# undo = reset --soft --keep HEAD^
 	# unstage = reset HEAD
-	# first = !sh -c 'git log origin/master --pretty=format:%H  --reverse | head -1'
-	# lasttag = !sh -c 'git log --simplify-by-decoration --decorate=short --tags --format="%H" |head -1'
-	# wtf = !git-wtf
-	# has = branch --contains
-	# db = !sh -c 'git branch -D $1 && git push origin :$1' -
-	# sweep = !sh -c 'git-sweep cleanup'
-	# ph = log --graph --pretty=pretty-history --abbrev-commit --date=relative
-	# permission-reset = "git clone git://github.com/balupton/history.js.git help config  diff -p | grep -E '^(diff|old mode|new mode)' | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' | git apply"
 	# username = config --get user.name
-	# standup = !sh -c 'git log --pretty=format:\"%Cred%h%Creset - %Cgreen%cr%Creset : %s\" --since=\"`date -v-1d \"+%Y-%m-%d 00:00:00\"`\" --until=\"`date \"+%Y-%m-%d 00:00:00\"`\" --all --author=\"`git config --get user.name`\"'
+	# worddiff = diff --word-diff
+	# wtf = !git-wtf
 [commit]
 	gpgSign = true
+[gpg]
+	program = gpg
