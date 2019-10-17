@@ -4,6 +4,7 @@
 	signingkey = 30F3C943744E1A3C473F2C723D84C07E91802E41
 [core]
 	editor = emacsclient -c -t
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	b = branch
 	bc = checkout -b
