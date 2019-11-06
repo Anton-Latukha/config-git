@@ -72,7 +72,7 @@
 [commit]
 	gpgSign = true
 [gpg]
-	program = gpg
+	program = gpg2
 [color]
 	ui = true
 [color "diff-highlight"]
