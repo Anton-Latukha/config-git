@@ -21,8 +21,13 @@ lastCommitMessageHead="$(printf "%s" "$lastCommitMessage" | sed 's/[^:]*$//')"
 shortStatus="$(git status --porcelain=v1)"
 
 # branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
+
+
+### Main output
+
 printf '# %s 
 # %s
 ' "$lastCommitMessageHead" "$shortStatus" > "$file"
+
 
 exit 0
