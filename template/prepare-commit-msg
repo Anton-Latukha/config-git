@@ -16,10 +16,10 @@ fi
 
 lastCommitMessage="$(git log -1 --pretty=format:%s)"
 
-# branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
 
 sed -i "1 i \\
 # $lastMessage
+# branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
 " "$file"
 
 exit 0
