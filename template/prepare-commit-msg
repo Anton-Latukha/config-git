@@ -16,7 +16,19 @@ fi
 
 lastCommitMessage="$(git log -1 --pretty=format:%s)"
 
-lastCommitMessageHead="$(printf "%s" "$lastCommitMessage" | sed 's/[^:]*$//')"
+removeAfterLast=':'
+includeAfterLastSymbol='y'    # y/n
+includeAfterLastSymbol=$(
+  if [ 'n' = "$includeAfterLastSymbol" ]; then
+    printf '%s' "$removeAfterLast"
+  fi
+)
+
+# Remove everything after last occurence of `removeAfterLast`
+lastCommitMessageHead="$(printf "%s" "$lastCommitMessage" |
+  sed 's/'"$includeAfterLastSymbol"'[^'"$removeAfterLast"']*$//')"
+
+# removeAfterFirst='>'
 
 shortStatus="$(git status --porcelain=v1)"
 
