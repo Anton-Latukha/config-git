@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+file="$1"    # Points to current git file that contains the commit log message.
+inputMethod="$2"    # From where commit process is triggered
+#  - message:  -m or -F option was given
+#  - template: -t option was given, or config option commit.template is set
+#  - merge:    the commit is a merge or a .git/MERGE_MSG file exists
+#  - squash:   .git/SQUASH_MSG file exists
+#  - commit:   -c, -C or --amend option was given
+hash="$3"
+
+# Only act if the user is creating/editing a new commit message.
+if [ -n "$inputMethod" ]; then
+    exit 0
+fi
+
+branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
+
+sed -i "1 i \\
+# $branchname initial\\
+# $branchname ready for review\\
+# $branchname passed review\\
+# $branchname done\\
+" "$file"
+
+exit 0
