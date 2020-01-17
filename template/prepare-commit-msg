@@ -14,8 +14,7 @@ if [ -n "$inputMethod" ]; then
     exit 0
 fi
 
-# message from the last commit:
-lastMessage="$(git log -1 --pretty=format:%s)"
+lastCommitMessage="$(git log -1 --pretty=format:%s)"
 
 # branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
 
