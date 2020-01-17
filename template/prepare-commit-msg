@@ -7,7 +7,7 @@ inputMethod="$2"    # From where commit process is triggered
 #  - merge:    the commit is a merge or a .git/MERGE_MSG file exists
 #  - squash:   .git/SQUASH_MSG file exists
 #  - commit:   -c, -C or --amend option was given
-hash="$3"
+# hash="$3"    # Third is hash - but it is not used
 
 # Only act if the user is creating/editing a new commit message.
 if [ -n "$inputMethod" ]; then
