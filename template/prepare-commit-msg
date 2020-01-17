@@ -16,6 +16,8 @@ fi
 
 lastCommitMessage="$(git log -1 --pretty=format:%s)"
 
+lastCommitMessageHead="$(printf "%s" "$lastCommitMessage" | sed 's/[^:]*$//')"
+
 
 sed -i "1 i \\
 # $lastMessage
