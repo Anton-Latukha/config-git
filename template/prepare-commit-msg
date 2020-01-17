@@ -14,13 +14,13 @@ if [ -n "$inputMethod" ]; then
     exit 0
 fi
 
-branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
+# message from the last commit:
+lastMessage="$(git log -1 --pretty=format:%s)"
+
+# branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
 
 sed -i "1 i \\
-# $branchname initial\\
-# $branchname ready for review\\
-# $branchname passed review\\
-# $branchname done\\
+# $lastMessage
 " "$file"
 
 exit 0
