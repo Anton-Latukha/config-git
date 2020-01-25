@@ -39,9 +39,10 @@ commentInShortStatus="$(printf '%s' "$shortStatus" | sed 's/^/# /')"
 
 ### Main output
 
-printf '# %s 
+printf '# %s
 # %s
-' "$lastCommitMessageHead" "$commentInShortStatus" > "$file"
+# %s
+' "$lastCommitMessageHead" "$lastCommitMessage" "$commentInShortStatus" > "$file"
 
 
 exit 0
