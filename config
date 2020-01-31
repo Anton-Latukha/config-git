@@ -72,6 +72,7 @@
 	# wtf = !git-wtf
 	# `git commit-tree` Creates a new commit object based on the provided tree object and emits the new commit object id on stdout. The log message is read from the standard input, unless -m or -F options are given. It takes HEAD and commits whole tree as single commit. `git reset` - resets (moves) to commit.
 	squash-all = "! f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+	stash-staged-keep-files = "! git stash --keep-index ; git stash push -m "staged" --keep-index; git stash pop stash@{1}"
 [commit]
 	gpgSign = true
 [gpg]
