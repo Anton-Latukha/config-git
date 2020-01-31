@@ -71,7 +71,7 @@
 	# worddiff = diff --word-diff
 	# wtf = !git-wtf
 	# `git commit-tree` Creates a new commit object based on the provided tree object and emits the new commit object id on stdout. The log message is read from the standard input, unless -m or -F options are given. It takes HEAD and commits whole tree as single commit. `git reset` - resets (moves) to commit.
-	squash-all = "!f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
+	squash-all = "! f(){ git reset $(git commit-tree HEAD^{tree} -m \"${1:-A new start}\");};f"
 [commit]
 	gpgSign = true
 [gpg]
