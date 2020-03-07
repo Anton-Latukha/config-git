@@ -93,5 +93,8 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+## Position Git diff to headlines in Org-mode files
+[diff "org"]
+	xfuncname = "^(\\*+ [a-zA-Z0-9]+.+)$"
 [init]
 	templatedir = /home/pyro/.config/git/template
