@@ -40,10 +40,7 @@ filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' 
 
 ### Main output, sed comments the first N lines
 
-printf '# %s
-# %s
-# %s
-' "$lastCommitMessages" "$lastCommitMessageHead" "$filesStatus" > "$file"
+printf '%s\n%s\n\n%s\n' "$lastCommitMessages" "$lastCommitMessageHead" "$filesStatus" | sed '1,4s/^/# /' > "$file"
 
 
 exit 0
