@@ -38,7 +38,7 @@ filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' 
 # branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
 
 
-### Main output
+### Main output, sed comments the first N lines
 
 printf '# %s
 # %s
