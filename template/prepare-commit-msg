@@ -29,6 +29,7 @@ lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
 
 # removeAfterFirst='>'
 
+# Get status & file listing | Replace second char to space | Output only staged files.
 filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' | rg '^\S')"
 
 commentInShortStatus="$(printf '%s' "$shortStatus" | sed 's/^/# /')"
