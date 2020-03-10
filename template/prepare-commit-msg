@@ -18,14 +18,14 @@ lastCommitMessages="$(git log --format=%s -2)"
 removeAfterLast=':'
 
 # Remove everything after last occurence of `removeAfterLast`
-lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
-  sed 's/[^'"$removeAfterLast"']*$//')"
+# lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
+#   sed '')"
 
 # Get status & file listing | Replace second char to space | Output only staged files.
-filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' | rg '^\S')"
+filesStatus="$(git status --porcelain=v1 --untracked-files='no' | rg '^\S')"
 
 ### Main output, sed comments the first N lines
 
-printf '%s\n%s\n\n%s\n' "$lastCommitMessages" "$lastCommitMessageHead" "$filesStatus" | sed '1,4s/^/# /' > "$file"
+printf '%s\n%s\n\n%s\n' "$lastCommitMessages" "$lastCommitMessages" "$filesStatus" | sed -e '1,4s/^/# /; 3,4s/[^'"$removeAfterLast"']*$//; 6,$s/./ /2' > "$file"
 
 exit 0
