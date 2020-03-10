@@ -29,7 +29,7 @@ lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
 
 # removeAfterFirst='>'
 
-shortStatus="$(git status --porcelain=v1 --untracked-files='no')"
+filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' | rg '^\S')"
 
 commentInShortStatus="$(printf '%s' "$shortStatus" | sed 's/^/# /')"
 
