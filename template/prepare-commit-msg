@@ -14,7 +14,7 @@ if [ -n "$inputMethod" ]; then
     exit 0
 fi
 
-lastCommitMessage="$(git log -1 --pretty=format:%s)"
+lastCommitMessages="$(git log --format=%s -2)"
 
 removeAfterLast=':'
 includeAfterLastSymbol='y'    # y/n
