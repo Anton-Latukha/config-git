@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env dash
 
 file="$1"    # Points to current git file that contains the commit log message.
 inputMethod="$2"    # From where commit process is triggered
