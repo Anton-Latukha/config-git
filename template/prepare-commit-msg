@@ -21,16 +21,8 @@ removeAfterLast=':'
 lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
   sed 's/[^'"$removeAfterLast"']*$//')"
 
-# removeAfterFirst='>'
-
 # Get status & file listing | Replace second char to space | Output only staged files.
 filesStatus="$(git status --porcelain=v1 --untracked-files='no' | sed 's/./ /2' | rg '^\S')"
-
-# commentInShortStatus="$(printf '%s' "$fileStatus" | sed 's/^/# /')"
-# commentedInLastCommitMessages="$(printf '%s' "$lastCommitMessages" | sed 's/^/# /')"
-
-# branchname="$(git symbolic-ref -q HEAD | cut -f3 -d'/')"
-
 
 ### Main output, sed comments the first N lines
 
