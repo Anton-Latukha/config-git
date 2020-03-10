@@ -14,7 +14,7 @@ if [ -n "$inputMethod" ]; then
     exit 0
 fi
 
-lastCommitMessages="$(git log --format=%s -2)"
+lastCommitMessages=$(git log --format=%s -2)
 removeAfterLast=':'
 
 # Get status & file listing | Output only staged files.
