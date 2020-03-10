@@ -15,7 +15,6 @@ if [ -n "$inputMethod" ]; then
 fi
 
 lastCommitMessages="$(git log --format=%s -2)"
-
 removeAfterLast=':'
 includeAfterLastSymbol='y'    # y/n
 includeAfterLastSymbol=$(
@@ -25,7 +24,7 @@ includeAfterLastSymbol=$(
 )
 
 # Remove everything after last occurence of `removeAfterLast`
-lastCommitMessageHead="$(printf "%s" "$lastCommitMessage" |
+lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
   sed 's/'"$includeAfterLastSymbol"'[^'"$removeAfterLast"']*$//')"
 
 # removeAfterFirst='>'
@@ -42,7 +41,7 @@ commentInShortStatus="$(printf '%s' "$shortStatus" | sed 's/^/# /')"
 printf '# %s
 # %s
 # %s
-' "$lastCommitMessageHead" "$lastCommitMessage" "$commentInShortStatus" > "$file"
+' "$lastCommitMessages" "$lastCommitMessageHead" "$filesStatus" > "$file"
 
 
 exit 0
