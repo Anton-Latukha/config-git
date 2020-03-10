@@ -17,8 +17,8 @@ fi
 lastCommitMessages="$(git log --format=%s -2)"
 removeAfterLast=':'
 
-# Get status & file listing | Replace second char to space | Output only staged files.
-filesStatus="$(git status --porcelain=v1 --untracked-files='no' | rg '^\S')"
+# Get status & file listing | Output only staged files.
+filesStatus=$(git status --porcelain=v1 --untracked-files='no' | rg '^\S')
 
 ### Main output: assemble text -> sed comments the first N lines -> removes tails from N-N lines -> erases second char in lines after N char
 
