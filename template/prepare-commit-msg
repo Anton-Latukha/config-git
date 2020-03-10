@@ -17,10 +17,6 @@ fi
 lastCommitMessages="$(git log --format=%s -2)"
 removeAfterLast=':'
 
-# Remove everything after last occurence of `removeAfterLast`
-# lastCommitMessageHead="$(printf "%s" "$lastCommitMessages" |
-#   sed '')"
-
 # Get status & file listing | Replace second char to space | Output only staged files.
 filesStatus="$(git status --porcelain=v1 --untracked-files='no' | rg '^\S')"
 
