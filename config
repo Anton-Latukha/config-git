@@ -24,6 +24,7 @@
 	pl = pull
 	pll = pull
 	plu = pull u
+	plum = pull u master
 	ps = push
 	r = reset
 	r0 = reset HEAD~0
