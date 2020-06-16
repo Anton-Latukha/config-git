@@ -14,7 +14,7 @@
 	cl = clone --origin u
 	co = checkout
 	com = checkout master
-	cb = "!git com && git plum && git co -b"
+	cb = "!git plum && git co -b"
 	d = diff
 	g = log --graph --oneline --decorate=full
 	gv = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
@@ -24,7 +24,7 @@
 	pl = pull
 	pll = pull
 	plu = pull u
-	plum = pull u master
+	plum = "!git checkout master && git pull u master"
 	ps = push
 	r = reset
 	r0 = reset HEAD~0
