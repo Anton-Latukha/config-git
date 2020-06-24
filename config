@@ -26,6 +26,7 @@
 	pll = pull
 	plu = pull u
 	plum = "!git checkout master && git pull u master"
+	plums = "!git plum && git push f master"
 	ps = push
 	r = reset
 	r0 = reset HEAD~0
