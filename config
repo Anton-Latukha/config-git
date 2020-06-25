@@ -16,7 +16,7 @@
 	com = checkout master
 	cbr = "!git plum && git co -b"
 	#  This pulls master, creates and checks into the branch YYYY-MM-DD-name 
-  cbd = "!f() { git plum && git co -b \"$(date --iso)\"-\"$@\"; }; f"
+  cb = "!f() { git plum && git co -b \"$(date --iso)\"-\"$@\"; }; f"
 	d = diff
 	g = log --graph --oneline --decorate=full
 	gv = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
