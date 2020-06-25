@@ -14,7 +14,7 @@
 	cl = clone --origin u
 	co = checkout
 	com = checkout master
-	cb = "!git plum && git co -b"
+	cbr = "!git plum && git co -b"
 	#  This pulls master, creates and checks into the branch YYYY-MM-DD-name 
   cbd = "!f() { git plum && git co -b \"$(date --iso)\"-\"$@\"; }; f"
 	d = diff
