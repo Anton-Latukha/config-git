@@ -104,3 +104,5 @@
 	xfuncname = "^(\\*+ [a-zA-Z0-9]+.+)$"
 [init]
 	templatedir = /home/pyro/.config/git/template
+[forge]
+	remote = u
