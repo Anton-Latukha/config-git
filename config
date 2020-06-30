@@ -108,3 +108,6 @@
 	remote = u
 [github]
 	user = Anton-Latukha
+[include]
+  # For username / creds / etc
+  path = ~/.config/git/config.local
