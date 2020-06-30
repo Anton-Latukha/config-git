@@ -106,3 +106,5 @@
 	templatedir = /home/pyro/.config/git/template
 [forge]
 	remote = u
+[github]
+	user = Anton-Latukha
