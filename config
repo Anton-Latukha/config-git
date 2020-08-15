@@ -111,3 +111,5 @@
 [include]
   # For username / creds / etc
   path = ~/.config/git/config.local
+[pull]
+	ff = only
