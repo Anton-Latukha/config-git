@@ -5,7 +5,6 @@
 [core]
 	editor = emacsclient -c -t
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	hooksPath = /home/pyro/.config/git/template/hook
 [alias]
 	b = branch
 	bc = checkout -b
